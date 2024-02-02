@@ -22,25 +22,25 @@ Finally, they can place an order, track it and specify a hangar the plane has to
 
 ## RDB Schema
 
-> _Hangary (ID_Hangaru, Kraj, Miasto, Właściciel REF Linie_Lotnicze)_
+> _Hangary (<ins>ID_Hangaru</ins>, Kraj, Miasto, Właściciel *REF* Linie_Lotnicze)_
 
 > _Linie_Lotnicze (<ins>ID_Linii</ins>, Nazwa, Kod_MULC, Kod_IATA)_
 
-> _Zamówienia (ID_Zamówienia, Data, Miejsce_dostawy REF Hangary, Dostawca REF Firmy_Logistyczne, Zlecający REF Działy)_
+> _Zamówienia (<ins>ID_Zamówienia</ins>, Data, Miejsce_dostawy *REF* Hangary, Dostawca *REF* Firmy_Logistyczne, Zlecający *REF* Działy)_
 
-> _Firmy_Logistyczne (ID_Firmy, Nazwa, Kraj)_
+> _Firmy_Logistyczne (<ins>ID_Firmy</ins>, Nazwa, Kraj)_
 
-> _Pracownik_Samolotu (ID_Pracownika, Imię, Nazwisko, Stanowisko, Naczelnik REF Działy)_
+> _Pracownik_Samolotu (<ins>ID_Pracownika</ins>, Imię, Nazwisko, Stanowisko, Naczelnik *REF* Działy)_
 
-> _Raporty (ID_Raportu, Data, Kod_awarii, Pojazd REF Samoloty, Przetwarzający REF Działy)_
+> _Raporty (<ins>ID_Raportu</ins>, Data, Kod_awarii, Pojazd *REF* Samoloty, Przetwarzający *REF* Działy)_
 
-> _Producenci (Nazwa, Numer_tel, Email, Strona_internetowa)_
+> _Producenci (<ins>Nazwa</ins>, Numer_tel, Email, Strona_internetowa)_
 
-> _Działy (ID_Działu, Nazwa, Numer_tel, Właściciel REF Linie_Lotnicze)_
+> _Działy (<ins>ID_Działu</ins>, Nazwa, Numer_tel, Właściciel *REF* Linie_Lotnicze)_
 
-> _Samoloty (NRS, Cena, Pojemność_pasażerska, Zasięg_lotu, Rozpiętość_skrzydeł, Długość, Stan, Dostępność, Model, Numer_zamówienia REF Zamówienia, Potencjalny_klient REF Działy, Producent REF Producenci)_
+> _Samoloty (<ins>NRS</ins>, Cena, Pojemność_pasażerska, Zasięg_lotu, Rozpiętość_skrzydeł, Długość, Stan, Dostępność, Model, Numer_zamówienia *REF* Zamówienia, Potencjalny_klient *REF* Działy, Producent *REF* Producenci)_
 
-> _Logi (ID_Pracownika REF Pracownik_Samolotu, NRS REF Samoloty, Data)_
+> _Logi (<ins>ID_Pracownika</ins> *REF* Pracownik_Samolotu, <ins>NRS</ins> *REF* Samoloty, Data)_
 
 ## Tech Stack
 
@@ -48,7 +48,7 @@ The only technology used in the database is **SQL** using **Microsoft SQL Server
 
 ## Final remarks
 
-This is a university project, not a real one. This database is not supposed to be used in real life (at least for now).
+**This is a university project**, not a real one. This database is not supposed to be used in real life (at least for now).
 
 If you encounter any problems with it or want to contribute to the project, please, contact me: `hello.szulakiewicz@gmail.com`
 
