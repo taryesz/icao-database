@@ -12,12 +12,13 @@ The team can also analyze all the problems that have ever occured to this specif
 
 Finally, they can place an order, track it and specify a hangar the plane has to be delivered to!
 
+> For more scenarios visit `select.sql` 
 
 ## ERD Diagram
 
-<img width="793" alt="The ERD diagram of the ICAO databse" src="https://github.com/taryesz/MOLC_database/assets/106448156/235f6030-cd08-41f4-83f1-ad95ddf078f0">
+`Currently, the only version of the diagram is in Polish. Sorry for the inconvinience :)`
 
-Currently, the only version of the diagram is in Polish. Sorry for the inconvinience :)
+<img width="793" alt="The ERD diagram of the ICAO databse" src="https://github.com/taryesz/MOLC_database/assets/106448156/235f6030-cd08-41f4-83f1-ad95ddf078f0">
 
 ## RDB Schema
 
@@ -40,4 +41,14 @@ Currently, the only version of the diagram is in Polish. Sorry for the inconvini
 > _Samoloty (NRS, Cena, Pojemność_pasażerska, Zasięg_lotu, Rozpiętość_skrzydeł, Długość, Stan, Dostępność, Model, Numer_zamówienia REF Zamówienia, Potencjalny_klient REF Działy, Producent REF Producenci)_
 
 > _Logi (ID_Pracownika REF Pracownik_Samolotu, NRS REF Samoloty, Data)_
+
+## Tech Stack
+
+The only technology used in the database is **SQL** using **Microsoft SQL Server** DBMS
+
+## Final remarks
+
+This is a university project, not a real one. This database is not supposed to be used in real life (at least for now).
+
+If you encounter any problems with it or want to contribute to the project, please, contact me: `hello.szulakiewicz@gmail.com`
 
