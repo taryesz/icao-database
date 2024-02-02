@@ -12,8 +12,32 @@ The team can also analyze all the problems that have ever occured to this specif
 
 Finally, they can place an order, track it and specify a hangar the plane has to be delivered to!
 
+
 ## ERD Diagram
 
-<img width="793" alt="Zrzut ekranu 2024-02-2 o 5 07 33 PM" src="https://github.com/taryesz/MOLC_database/assets/106448156/235f6030-cd08-41f4-83f1-ad95ddf078f0">
+<img width="793" alt="The ERD diagram of the ICAO databse" src="https://github.com/taryesz/MOLC_database/assets/106448156/235f6030-cd08-41f4-83f1-ad95ddf078f0">
 
 Currently, the only version of the diagram is in Polish. Sorry for the inconvinience :)
+
+## RDB Schema
+
+> _Hangary (ID_Hangaru, Kraj, Miasto, Właściciel REF Linie_Lotnicze)_
+
+> _Linie_Lotnicze (<ins>ID_Linii</ins>, Nazwa, Kod_MULC, Kod_IATA)_
+
+> _Zamówienia (ID_Zamówienia, Data, Miejsce_dostawy REF Hangary, Dostawca REF Firmy_Logistyczne, Zlecający REF Działy)_
+
+> _Firmy_Logistyczne (ID_Firmy, Nazwa, Kraj)_
+
+> _Pracownik_Samolotu (ID_Pracownika, Imię, Nazwisko, Stanowisko, Naczelnik REF Działy)_
+
+> _Raporty (ID_Raportu, Data, Kod_awarii, Pojazd REF Samoloty, Przetwarzający REF Działy)_
+
+> _Producenci (Nazwa, Numer_tel, Email, Strona_internetowa)_
+
+> _Działy (ID_Działu, Nazwa, Numer_tel, Właściciel REF Linie_Lotnicze)_
+
+> _Samoloty (NRS, Cena, Pojemność_pasażerska, Zasięg_lotu, Rozpiętość_skrzydeł, Długość, Stan, Dostępność, Model, Numer_zamówienia REF Zamówienia, Potencjalny_klient REF Działy, Producent REF Producenci)_
+
+> _Logi (ID_Pracownika REF Pracownik_Samolotu, NRS REF Samoloty, Data)_
+
