@@ -14,6 +14,6 @@ Finally, they can place an order, track it and specify a hangar the plane has to
 
 ## ERD Diagram
 
-![The ERD diagram of ICAO database](<img width="793" alt="Zrzut ekranu 2024-02-2 o 5 07 33 PM" src="https://github.com/taryesz/MOLC_database/assets/106448156/235f6030-cd08-41f4-83f1-ad95ddf078f0">)
+<img width="793" alt="Zrzut ekranu 2024-02-2 o 5 07 33 PM" src="https://github.com/taryesz/MOLC_database/assets/106448156/235f6030-cd08-41f4-83f1-ad95ddf078f0">
 
 Currently, the only version of the diagram is in Polish. Sorry for the inconvinience :)
